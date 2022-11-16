@@ -3,16 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponent } from './components/first.compnent';
-import { SecondComponent } from './components/second.component';
-import { ThirdComponent } from './components/third.component';
+import { UserDate } from './components/userDate.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent,
-    SecondComponent,
-    ThirdComponent
+    UserDate
   ],
   imports: [
     BrowserModule,

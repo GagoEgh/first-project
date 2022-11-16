@@ -1,0 +1,32 @@
+.card{
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    font-weight: bolder;
+    border: 1px solid;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.delete{
+    cursor: pointer;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.gold{
+    background-color: gold;
+}
+.green{
+    background-color: green;
+}
+

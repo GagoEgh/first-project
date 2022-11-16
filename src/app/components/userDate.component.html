@@ -1,0 +1,10 @@
+<ul>
+    <li class="card" 
+        [ngClass]="user.colorBg"
+        *ngFor="let user of users,let i = index">
+        {{user.name}}
+        <button (click)="changeColor(i)">change color</button>
+        <span class="delete" (click)="deleteUser(i)">&times;</span>
+    </li>
+</ul>
+
