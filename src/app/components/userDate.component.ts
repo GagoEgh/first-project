@@ -10,58 +10,32 @@ interface Color<T> {
     styleUrls: ["./userDate.component.css"]
 })
 export class UserDate {
+    color = "#";
     users = [
         {
             name: 'Babken',
-            colorBg: <Color<boolean>>{
-                "red": false,
-                "blue": false,
-                "green": false,
-                "gold": false
-            }
+            color:this.color
         },
         {
             name: 'Valod',
-            colorBg: <Color<boolean>>{
-                "red": false,
-                "blue": false,
-                "green": false,
-                "gold": false,
-            }
+            color:this.color
         },
         {
             name: 'Hrach',
-            colorBg: <Color<boolean>>{
-                "red": false,
-                "blue": false,
-                "green": false,
-                "gold": false,
-            }
+            color:this.color
         },
         {
             name: 'Ono',
-            colorBg: <Color<boolean>>{
-                "red": false,
-                "blue": false,
-                "green": false,
-                "gold": false,
-            }
+            color:this.color
         }
 
     ]
 
     changeColor(index: number):void {
-
-        let keys = Object.keys(this.users[index].colorBg);
-        let i = Math.floor(Math.random() * keys.length);
-        this.users[index].colorBg[keys[i]] = true;
-
-        for (let k = 0; k < this.users.length; k++) {
-            if(!this.users[k].colorBg[keys[i]]){
-                delete this.users[k].colorBg[keys[i]]
-            }
-            
-        }
+        this.color = "#";
+        let random = Math.random().toString(16).slice(2,8);
+        this.color+=random;
+        this.users[index].color = this.color;
     }
 
     deleteUser(index: number): void {
